@@ -15,6 +15,5 @@ class Lowongan extends Model
         'lokasi',
         'gaji',
         'deskripsi_pekerjaan',
-        'logo_perusahaan',
     ];
 }

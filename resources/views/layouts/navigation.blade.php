@@ -11,7 +11,6 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    {{-- Link untuk Manajemen Lowongan (hanya muncul jika user login) --}}
                     @auth
                         <x-nav-link :href="route('admin.lowongan.index')" :active="request()->routeIs('admin.lowongan.*')">
                             {{ __('Manajemen Lowongan') }}
@@ -21,13 +20,11 @@
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">
-                {{-- Jika belum login --}}
                 @guest
                     <a href="{{ route('login') }}" class="text-gray-600 hover:text-gray-900 mx-2">Login</a>
                     <a href="{{ route('register') }}" class="text-gray-600 hover:text-gray-900 mx-2">Register</a>
                 @endguest
 
-                {{-- Jika sudah login --}}
                 @auth
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">

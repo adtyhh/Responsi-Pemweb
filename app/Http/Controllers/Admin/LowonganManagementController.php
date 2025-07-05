@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Lowongan;
 use Illuminate\Http\Request;
 
+
 class LowonganManagementController extends Controller
 {
 
